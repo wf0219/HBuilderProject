@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车宣传</title>
+    <link rel="stylesheet" href="css/jquery.fullpage.css"/>
+    <link rel="stylesheet" href="css/index1.css"/>
+
+</head>
+<body>
+<a href="#" class="go"><img src="images/00-go.png" alt=""></a>
+<a href="javascript:;" class="more"><img src="images/00-more.png" alt=""></a>
+<div class="container">
+    <div class="section sceen01">
+        <!--如果是大屏幕 是基于top定位  脱离显示区域  固定在一个区域内  用一个固定大小的容器来装内容-->
+        <div class="content">
+            <!--商品列表，沙发，横幅-->
+            <div class="goods"><img src="images/01-goods.png" alt=""></div>
+            <div class="sofa"><img src="images/01-sofa.png" alt=""></div>
+            <div class="fly"><img src="images/01-fly.png" alt=""></div>
+        </div>
+    </div>
+    <div class="section sceen02">
+        <div class="content">
+            <div class="goods"><img src="images/02-goods.png" alt=""></div>
+            <div class="sofa"><img src="images/02-sofa.png" alt=""></div>
+
+            <!--输入框 搜索框 关键字-->
+            <div class="input">
+                <img class="search" src="images/02-search.png" alt="">
+                <img class="key" src="images/02-key.png" alt="">
+            </div>
+            <!--文字-->
+            <div class="text">
+                <img class="text01" src="images/02-text1.png" alt="">
+                <img class="text02" src="images/02-text2.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="section sceen03">
+        <div class="content">
+            <div class="sofa"><img src="images/02-sofa.png" alt=""></div>
+            <div class="change">
+                <img src="images/03-change01.gif" alt="">
+                <img src="images/03-change02.gif" alt="">
+            </div>
+            <div class="cart">
+                <img src="images/03-cart01.gif" alt="">
+                <img src="images/03-cart02.gif" alt="">
+
+            </div>
+        </div>
+    </div>
+    <div class="section sceen04">
+        <div class="content">
+            <!--白云-->
+            <div class="cloud"><img src="images/04-cloud.png" alt=""></div>
+            <!--文字-->
+            <div class="text">
+                <img src="images/04-text01.png" alt="">
+                <img src="images/04-text02.png" alt="">
+            </div>
+            <!--购物车-->
+            <div class="cart"><img src="images/04-cart.png" alt=""></div>
+            <!--沙发-->
+            <div class="sofa"><img src="images/02-sofa.png" alt=""></div>
+            <!--收货地址-->
+            <div class="address">
+                <img src="images/04-address01.png" alt="">
+                <img src="images/04-address02.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section sceen05">
+        <div class="content">
+            <div class="text">
+                <img src="images/05-text.png" alt=""></div>
+            <div class="sofa">
+                <img src="images/02-sofa.png" alt=""></div>
+            <div class="card">
+                <img class="cardImg" src="images/05-card.png" alt="">
+                <img class="orderImg" src="images/05-order.png" alt=""></div>
+            <div class="mouse">
+                <img class="m1" src="images/05-mouse01.png" alt="">
+                <img class="m2"  src="images/05-mouse02.png"  alt="">
+                <img class="hand"  src="images/05-hand.png"  alt=""/>
+            </div>
+
+        </div>
+    </div>
+    <div class="section sceen06">
+        <div class="content">
+            <!--白云-->
+            <div class="cloud">
+                <img src="images/06-cloud01.png" alt="">
+                <img src="images/06-cloud02.png" alt="">
+            </div>
+            <!--文字-->
+            <div class="text">
+                <img src="images/06-text01.png" alt="">
+                <img src="images/06-text02.png" alt="">
+            </div>
+            <!--盒子-->
+            <div class="box"><img src="images/06-box.png" alt=""></div>
+            <!--汽车-->
+            <div class="car">
+                <img class="carImg" src="images/06-car.png" alt="">
+                <img class="buyer" src="images/06-buyer.png" alt="">
+                <img class="address" src="images/06-address.png" alt="">
+                <img class="worker" src="images/06-worker.png" alt="">
+                <img class="say" src="images/06-say.png" alt="">
+            </div>
+           <!-- &lt;!&ndash;收货人&ndash;&gt;-->
+            <div class="person">
+                <img class="personImg" src="images/06-person.png" alt="">
+                <img class="door" src="images/06-door.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section screen07">
+        <div class="content">
+            <div class="star">
+                <img src="images/07-star.png" alt="">
+                <img src="images/07-star.png" alt="">
+                <img src="images/07-star.png" alt="">
+                <img src="images/07-star.png" alt="">
+                <img src="images/07-star.png" alt="">
+            </div>
+            <div class="text"><img src="images/07-text.png" alt=""></div>
+        </div>
+    </div>
+    <div class="section screen08">
+        <div class="content">
+            <div class="btn">
+                <img src="images/08-btn01.png" alt="">
+                <img src="images/08-btn02.gif" alt="">
+            </div>
+            <div class="again"><img src="images/08-again.png" alt=""></div>
+            <div class="hand"><img src="images/08-hand.png" alt=""></div>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullpage.js"></script>
+<script>
+    $(function () {
+        /* $('.container').fullpage();*/
+        $('.container').fullpage({
+            /*配置参数*/
+            sectionsColor: ["#fadd67", "#84a2d4", "#ef674d", "#ffeedd", "#d04759", "#84d9ed", "#8ac060"],
+            verticalCentered: false,
+            navigation: true,
+            afterLoad:function (link,index) {
+                /*index 序号 1开始  当前屏的序号*/
+                $('.section').eq(index-1).addClass('now');
+            },
+            onLeave:function (index,nextIndex,direction) {
+                var cur=$('.section').eq(index-1);
+                if(index==2&& nextIndex==3){
+                    cur.addClass('leaved');
+                }else if(index==3&& nextIndex==4){
+                    cur.addClass('leaved');
+                }else if(index==5&& nextIndex==6){
+                    cur.addClass('leaved');
+                    $('.sceen06 .box').addClass('show');
+                }else if(index == 6 && nextIndex == 7){
+                    /*当前是从第6页到第7页*/
+                    $('.screen07 .star').addClass('show');
+                    $('.screen07 .text').addClass('show');
+                    $('.screen07 .star img').each(function (i, item) {
+                        /*$(item) == $(this);*/
+                        /*img display:none*/
+                        /*$(this).delay(i*0.5*1000).fadeIn();*/
+                        /*img opacity*/
+                        $(this).css('transition-delay',i*0.5+'s');
+                    });
+
+                }
+
+            },
+            /**点击更多*/
+            afterRender:function () {
+                $('.more').on("click",function(){
+                    $.fn.fullpage.moveSectionDown();
+                });
+                $('.sceen04 .cart').on("transitionend",function () {
+                    console.log("cart over!");
+                    $('.sceen04 .address').show().find('img:last').fadeIn(600);
+                    $('.sceen04 .text').addClass('show');
+                });
+                $('.screen08').on('mouseover',function (e) {
+                   $(this).find('.hand').css({
+                       left:e.clientX-190,
+                       top:e.clientY-20
+                   })
+                }).find('.again').on('click',function(){
+                    $('.now,.leaved,.show').removeClass('.now').removeClass('.leaved').removeClass('.show');
+                    /*2.4 加css属性  后果：加一个style属性*/
+                    /*2.5 用jquery方法  show() fadeIn() 后果：加一个style属性*/
+                    $('.content [style]').removeAttr('style');
+
+                    /*跳回第一页*/
+                    $.fn.fullpage.moveTo(1);
+                });
+            },
+            scrollingSpeed:1000
+            /*scrollingSpeed:1000*/
+        })
+
+    });
+
+</script>
+
+</body>
+</html>

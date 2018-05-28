@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue hello</title>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <a v-bind:href="url" target="_blank">baidu</a>
+    <input type="text" v-model="message"/>
+    <h1>{{message}}</h1>
+    <h2>{{food}}</h2>
+    <button v-on:click="jian">-1</button>
+    <input type="number" id="number" v-model="number"/>
+    <button id="btn" @click="jia">+1</button>
+    <hr/>
+    <input type="checkbox" v-model="see"/>显示/隐藏
+    <div v-if="see" style="height:100px;width:100px;background-color: palegreen;"></div>
+</div>
+<script src="js/vue.js"></script>
+<script>
+  var app =  new Vue({
+        el:'#app',
+        data:{
+            message:'Hello VueJs ~',
+            food:'foo~',
+            number:0,
+            url:'http://www.baidu.com',
+            see:true
+        },
+        methods:{
+            jian:function () {
+               this.number--;
+            },
+            jia:function () {
+                this.number++;
+            }
+        }
+    });
+  console.log(app.message);
+    /*jQuery*/
+   /* $('#btn').on('click',function () {
+        $('#number').val($('#number').val()-0+1);
+    })*/
+</script>
+</body>
+</html>

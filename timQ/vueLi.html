@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue li</title>
+</head>
+<body>
+<div id="lis">
+    <ul>
+        <li v-for="item in filterTodos">{{item.title}}</li>
+    </ul>
+    <ul>
+        <a href="#/all">全部</a>
+        <a href="#/active">active</a>
+        <a href="#/completed">com</a>
+    </ul>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:'#lis',
+        data:{
+            filterStat:'all',
+            todos:[{
+                id:1,title:'a',completed:true
+            },{
+                id:2,title:'b',completed:false
+            },{
+                id:3,title:'c',completed:true
+            }]
+        },
+        computed:{
+            /*过滤之后的数组*/
+            filterTodos:function () {
+                switch(this.filterStat){
+                    case 'active':
+                        return this.todos.filter(item=>!item.completed)
+                        break;
+                    case 'completed':
+                        return this.todos.filter(item => item.completed)
+                        break;
+                    default:
+                        return this.todos;
+                        break;
+                }
+
+            }
+        }
+    });
+    window.app=app;
+    window.onhashchange=function () {
+        var hash=window.location.hash.substr(2) || 'all'
+        window.app.filterStat=hash;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型</title>
+		<script type="text/javascript">
+/*	基本数据类型 Number，boolean，String，null，object=new Object（）；		
+ * undefined:未定义列席,值只有一个undefined
+			undefined会出现的情况:
+			 1变量声明了.没有赋值
+			 2函数没有明确返回值,如果接收了,结果也是undefined
+			如果一变量结果是undefined和一个数字进行计算，结果是NaN不是一个数字，也没有意义 
+			 * 
+			 * 
+			 * Number.MAX_VALUE+10 数字类型最大值
+			 * Number.MIN_VALUE 数字类型最小值
+			 * 获取数据类型方法typeof（变量名或者 typeof 变量名）*/
+			/*var o=new Object();
+			console.log(typeof 0);
+			console.log(typeof(0));*/
+			
+/*var nu=011;//八进制
+console.log(nu)*/
+//验证结果是否是NaN，数字不是NaN返回true，是数字返回flase
+var num;//undefined
+console.log(num+10==NaN);//结果：false 错误验证方法
+console.log(isNaN(num));//结果：true
+console.log(isNaN(10));//结果：flase
+
+/**
+ * 运算符
+ * 一元运算符、二元运算符、三元运算符
+ * 算数运算符 :+ - * /
+ * 复合运算符：+= -= *= /= %=
+ * 关系运算符:< > <= >= ==不严格的
+ *    != === !==严格的
+ * 
+ * 逻辑运算符：&& || ！
+ * 赋值运算符：= += -= *= /= %=
+ * 优先级从高到底
+		1. ()  优先级最高
+		2. 一元运算符  ++   --   !
+		3. 算数运算符  先*  /  %   后 +   -
+		4. 关系运算符  >   >=   <   <=
+		5. 相等运算符   ==   !=    ===    !==
+		6. 逻辑运算符 先&&   后||
+		7. 赋值运算符
+ * 
+ */
+
+  /*    var num=10;
+      var sum=++num +10;
+      console.log(sum);//21
+      console.log(num);//11
+  */
+  /* var month=parseInt(prompt("输入月份："));//6;
+     
+    switch (month) {//严格判断===
+     	case 1: console.log("21tian！"); break;
+     	case 2: console.log("22tian！"); break;
+     	case 3: console.log("23tian！"); break;
+    }*/
+   
+   /**
+    * 分支语句总结
+    * if():一个分支
+    * if-else();两个分支，最终只执行一个
+    * if-else if-else if...多个分支，最终只执行一个
+    * switch-case：多个分支，最终只执行一个,必须写break
+    */
+   
+   /**
+    * 反转数组
+    */
+  /* var attr=[10,20,30,40,50];
+   for(var i=0;i<attr.length/2;i++){//控制交换次数
+   	var temp=attr[i];//第一个值放第三个桌上
+   	attr[i]=attr[attr.length-1-i];
+   	attr[attr.length-1-i]=temp;
+   }
+   console.log(attr);*/
+  
+  //冒泡排序:把所有的数据按照一定的顺序进行排列(从小到大,从大到下)
+/* var arr = [10, 0, 100, 20, 60, 30];
+    //循环控制比较的轮数
+    for (var i = 0; i < arr.length - 1; i++) {
+      //控制每一轮的比较的次数
+      for (var j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] < arr[j + 1]) {
+          var temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+    document.write(arr);*/
+   
+   
+    //- 求1-n之间所有数的和
+    function geteverySum(n) {
+      var sum = 0;
+      for (var i = 1; i <= n; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    console.log(geteverySum);//输出函数代码
+    console.log(geteverySum(10));//执行函数，返回结果
+</script>
+	</head>
+	<body>
+	</body>
+</html>

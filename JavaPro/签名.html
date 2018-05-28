@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>签名</title>
+   <!-- //使用该签名插件要引入jQuery和jq-signature.js文件。-->
+
+    <link rel="stylesheet" href="css/default.css">
+
+
+</head>
+<body>
+
+<!--//操作按钮-->
+<button id="clearBtn" onclick="clearCanvas();">Clear Canvas</button>
+<button id="saveBtn" onclick="saveSignature();" disabled>Save Signature</button>
+
+<!--//创建一个签名区域-->
+<div class="js-signature"
+     data-width="600"
+     data-height="200"
+     data-border="1px solid #1ABC9C"
+     data-background="#16A085"
+     data-line-color="#fff"
+     data-auto-fit="true">
+</div>
+
+<div id="signature" style="background-color: palegreen;"></div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jq-signature.js"></script>
+<script>
+
+    $(document).on('ready', function() {
+        $('.js-signature').jqSignature();
+    });
+
+    function clearCanvas() {
+        $('#signature').html('<p><em>Your signature will appear here when you click "Save Signature"</em></p>');
+        $('.js-signature').jqSignature('clearCanvas');
+        $('#saveBtn').attr('disabled', true);
+    }
+
+    function saveSignature() {
+        $('#signature').empty();
+        var dataUrl = $('.js-signature').jqSignature('getDataURL');
+        var img = $('<img>').attr('src', dataUrl);
+        $('#signature').append($('<p>').text("Here's your signature:"));
+        $('#signature').append(img);
+    }
+
+    $('.js-signature').on('jq.signature.changed', function() {
+        $('#saveBtn').attr('disabled', false);
+    });
+</script>
+
+
+
+</body>
+</html>

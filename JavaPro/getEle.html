@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom方式获取元素的方式</title>
+	</head>
+	<body>
+		<div>
+			<ul class="u">
+				<li score='1'>1</li>
+				<li score='2'>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				
+			</ul>
+		</div>
+		<script>
+			var lis=document.getElementsByClassName("u")[0].getElementsByTagName("li");
+			for(var i=0;i<lis.length;i++){
+				console.log(lis[i].innerHTML);
+				lis[i].onclick=function(){
+					alert(this.getAttribute("score"));
+				}
+			}
+			/**
+			 * ById id唯一，返回单个对象
+			 * ByTagName 标签名 返回标签对应的数组
+			 * ByName  name属性值 返回name对应的数组
+			 * ByClassName 类样式名字 返回类样式对应的数组
+			 * h5：{部分浏览器支持
+			 * 	document.querySelector("选择器的名字")返回元素对象
+			 *  document.querySelelctorAll("选择器的名字")返回dom对象数组
+			 * }
+			 * 
+			 */
+		</script>
+	</body>
+</html>

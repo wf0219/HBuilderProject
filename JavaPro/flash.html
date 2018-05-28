@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画函数</title>
+		<style>
+			div{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function animate(ele,target){
+				clearInterval(ele.timeId);
+				ele.timeId=setInterval(function(){
+					//获取元素当前位置
+					var cur=ele.offsetLeft;
+					var step=10;
+					step=cur<target?step:-step;
+					cur+=step;
+					if(Math.abs(cur-target)>Math.abs(step)){
+						ele.style.left=cur+"px";
+					}else{
+						clearInterval(ele.timeId);
+						ele.style.left=target+"px";
+					}
+				},20);
+			}
+		</script>
+	</body>
+</html>

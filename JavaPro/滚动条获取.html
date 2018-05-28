@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取滚动条</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        /**
+         *
+         */
+        $(function () {
+            //测试获取
+            $("#btn").click(function () {
+                console.log("left:"+$("#dv").scrollLeft());
+                console.log("top:"+$("#dv").scrollTop());
+            });
+
+            //滚动获取
+            $("#dv").scroll(function () {
+                console.log("Stop:"+$(this).scrollTop());
+                console.log("Sleft:"+$(this).scrollLeft());
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btn">获取</button>
+<div id="dv" style="width: 200px;height: 200px;border: 1px solid red;overflow: auto;">
+    你是我的小时候是多少卡刷卡收款返款付货款
+    你是我的小时候是多少卡刷卡收款返款付货款你是我的小时候是多少卡刷卡收款返款付货
+    款你是我的小时候是多少卡刷卡收款返款付货款你是我的小时候是多少卡刷卡收款返款付
+    货款你是我的小时候是多少卡刷卡收款返款付货款你是我的小时候是多少卡刷卡收款返款
+    付货款你是我的小时候是多少卡刷卡收款返款付货款你是我的小时候是多少卡刷卡收款返
+    款付货款你是我的小时候是多少卡刷卡收款返款付货款你是我的小时候是多少卡刷
+    卡收款返款付货款你是我的小时候是多少卡刷卡收款返款付货款
+</div>
+</body>
+</html>

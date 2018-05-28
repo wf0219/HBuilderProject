@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>javaScript练习</title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+//			第一种就是常用的临时值存储
+//			第二种
+//			var num1=10,num2=20;
+//			console.log(num1,num2);
+//			num1=num1+num2;
+//			num2=num1-num2;/*num1为俩数和num2不变,,实现num2的交换*/
+//			num1=num1-num2;
+//			console.log(num1,num2);//20,10
+			
+			//位运算 （C语言）：看不懂的什么鬼，只是^表示什么什么转码
+			var num1=10,num2=20;//二进制
+			num1=num1^num2;//转换二进制的源码的反码的补码，然后来位移计算
+			num2=num1^num2;
+			num1=num1^num2;
+			console.log(num1,num2);
+			
+		</script>
+	</body>
+</html>

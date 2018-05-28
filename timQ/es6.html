@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let变量const常量</title>
+</head>
+<body>
+<script>
+  /* //变量不用赋值，可以修改，作用域中有效*/
+    let foo='123';
+    /*//  常量*/
+    const foo1='ddsf';
+    /*模板字符串*/
+    var he='dfds' +
+        'faa';
+    function add(x=10,y=20) {
+        return x+y;
+    }
+    console.log('add():'+add());
+    var arr=['a','b','c'];
+        arr.forEach(item => console.log(item));
+</script>
+</body>
+</html>
